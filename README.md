@@ -1,3 +1,4 @@
 # Portfolio
-A Django project done for self study.
-RESTful APIs included built using Django rest framework.
+The Portfolio is a web application of a person showing his/her achievements.
+Framework Used - Django, Bootstrap.
+RESTful APIs included built using Django REST Framework.

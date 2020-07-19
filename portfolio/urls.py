@@ -18,8 +18,12 @@ from django.urls import path
 import jobs.views
 from django.conf import settings
 from django.conf.urls.static import static
+import jobs.api_views
 
 urlpatterns = [
+    path('api/v1/jobs/', jobs.api_views.JobList.as_view()),
+    path('api/v1/jobs/new', jobs.api_views.JobCreate.as_view()),
+    path('api/v1/jobs/<int:id>/', jobs.api_views.JobRetrieveUpdateDestroy.as_view()),
     path('admin/', admin.site.urls),
     path('vikas', jobs.views.vikas, name='vikas'),
     path('', jobs.views.home, name='home'),
